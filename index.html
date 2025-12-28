@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حجز مواعيد الطبيب</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .payment-options {
+      margin-top: 10px;
+    }
+    .payment-options label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    button {
+      margin-top: 25px;
+      background: #1abc9c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #16a085;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>حجز موعد طبيب</h1><!-- اسم المريض -->
+<label for="patientName">اسم المريض</label>
+<input type="text" id="patientName" placeholder="ادخل اسم المريض" />
+
+<!-- أيام وجود الطبيب -->
+<label for="doctorDay">يوم وجود الطبيب</label>
+<select id="doctorDay">
+  <option>السبت</option>
+  <option>الأحد</option>
+  <option>الاثنين</option>
+  <option>الثلاثاء</option>
+  <option>الأربعاء</option>
+  <option>الخميس</option>
+</select>
+
+<!-- وقت وجود الطبيب -->
+<label for="doctorTime">وقت وجود الطبيب</label>
+<select id="doctorTime">
+  <option>09:00 - 10:00</option>
+  <option>10:00 - 11:00</option>
+  <option>11:00 - 12:00</option>
+  <option>12:00 - 01:00</option>
+  <option>04:00 - 05:00</option>
+</select>
+
+<!-- ماذا أخذ المريض -->
+<label for="treatment">ماذا أخذ / ملاحظات</label>
+<textarea id="treatment" rows="3" placeholder="أدوية، فحوصات، ملاحظات الطبيب"></textarea>
+
+<!-- طريقة الدفع -->
+<label>طريقة الدفع</label>
+<div class="payment-options">
+  <label><input type="radio" name="payment" /> فيزا</label>
+  <label><input type="radio" name="payment" /> نقداً</label>
+  <label><input type="radio" name="payment" /> ذمم</label>
+</div>
+
+<!-- زر الحجز -->
+<button onclick="alert('تم إرسال الحجز بنجاح')">تأكيد الحجز</button>
+
+  </div>
+</body>
+</html>
